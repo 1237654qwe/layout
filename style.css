@@ -30,8 +30,6 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   width: 349.36px;
   height: 4px;
- 
-  
 }
 
 .nav { 
@@ -222,15 +220,34 @@ progress::-webkit-progress-value {
   text-align: center;
   margin-bottom: 20px
 }
-.video__player img {
+.video__player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video__player > img {
   width: 1110px;
   height: 600px;
   margin-bottom: 20px;
 }
-.video__player:hover {
-  opacity: .5;
-  
+.content__preview {
+  position: absolute;
+  transition: .5s ease;
+  opacity: 0;
+  text-align: center;
 }
+
+.video__player:hover .video__photo {
+  opacity: 0.3;
+}
+
+.video__player:hover .content__preview {
+  opacity: 1;
+}
+
+
+
+
 
 
 .images {
@@ -241,14 +258,24 @@ progress::-webkit-progress-value {
   background-color: #FFFFFF;
   width: 100%;
 }
-.images__photo {
+.images__preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.images__photo > img {
   display: flex;
   flex-wrap: wrap;
   width: 475.5px;
   height: 475.5px;
 }
-.images__photo:hover {
-  opacity: .5;
+
+.images__preview:hover .images__photo {
+  opacity: 0.3;
+}
+
+.images__preview:hover .content__preview {
+  opacity: 1;
 }
 
 .feedback {
@@ -437,7 +464,12 @@ progress::-webkit-progress-value {
   }
   .video__player:hover {
     opacity: .5;
-    
+
+  }
+  .content__preview img {
+    width: 30px;
+    height: 30px;
+    padding-bottom: 10px;
   }
   
   
