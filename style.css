@@ -22,6 +22,18 @@ label {
   font-size: 14px;
 }
 
+progress::-webkit-progress-bar {
+  width: 445px;
+  height: 4px;  
+  background: #C4C4C4;
+}
+progress::-webkit-progress-value {
+  width: 349.36px;
+  height: 4px;
+ 
+  
+}
+
 .nav { 
   display: flex;
   justify-content: center;
@@ -180,7 +192,8 @@ label {
 }
 .author__skils__list progress {
   width: 445px;
-  margin-bottom: 10px;
+  margin: 10px 0;
+  height: 4px;
 }
 .author__photo img {
   width: 550px;
