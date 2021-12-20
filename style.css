@@ -30,6 +30,14 @@ textarea, input {
   border: none; 
 }
 
+input::placeholder {
+  padding-left: 15px;
+}
+
+textarea::placeholder {
+  padding: 15px 15px;
+}
+
 .nav { 
   display: flex;
   justify-content: center;
